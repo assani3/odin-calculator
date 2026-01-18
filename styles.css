@@ -1,0 +1,101 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+  }
+
+  .header {
+    background-color: #1F2937;
+    height: fit-content;
+  }
+
+  /* calculator container */
+  .container{
+    width: 310px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #1F2937;
+    box-shadow: 3px 3px rgb(84, 80, 80), -1em 0 0.4em rgb(94, 94, 92);
+  }
+
+  /* display screen style */
+  .display{
+    width: 270px;
+    height: 90px;
+    background-color:  rgb(190, 196, 196);
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  /* all the button's container */
+  .buttons{
+    display: flex;
+    margin-top: 10px; 
+  }
+
+  /* general button styles */
+  .btn_numbers{
+    display: inline-block;
+    width: 250px;
+    height: 100px;
+    padding-left: 20px;
+    
+  }
+
+  .btn{
+    height: 60px;
+    width: 60px;
+    background-color: #3b3c3e;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 7px;
+    margin: 3px;
+    
+  }
+
+  /* general operator buttons styles */
+  .btn_operators{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 300px;
+    margin-left: -40px;
+  }
+
+  .btn_op{
+    height: 60px;
+    width: 60px;
+    background-color: orange;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 7px;
+    margin: 3px;
+  }
+
+
+/* numbers hover styles */
+.btn_numbers:hover .btn:hover {
+  background: rgba(255, 255, 255, 0.183);
+  color: white
+}
+
+/* Operators hover syles */
+.btn_numbers:hover .btn_op:hover {
+  background: rgba(255, 255, 255, 0.183);
+  color: white
+}
+.btn_operators:hover .btn_op:hover {
+  background: rgba(255, 255, 255, 0.183);
+  color: white
+}
+
+
