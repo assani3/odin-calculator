@@ -58,18 +58,18 @@ function operate(number1, operator1, number2){
 
 }
 
-//Next session work on these it will probably be later today 2H session
+//Next session work on these
 function updateNumber1(num){
 num1 = num;
 console.log(num1)
 }
 
 function updateDisplay(){
-    //it must be equal to the variale that stores the value of the operation "sum" is just a placeholder
+//it must be equal to the variale that stores the value of the operation "sum" is just a placeholder
 document.querySelector(".display").textContent = sum;
 }
 
-//Event delegation fpr our buttons
+//Event delegation for our buttons
 
 const div = document.querySelector(".buttons");
 
@@ -81,20 +81,14 @@ div.addEventListener('click', event =>{
        // console.log(target.innerText);
         updateNumber1(target.innerText);
     }
-
-        // Finds the button even if you click an icon inside it
-    // const btn = event.target.closest('button');
-
-    // if (btn) {
-    //     console.log(btn.innerText);
-    // }
 });
 
 //we are getting somehwere so now when we click the numbers
 //they can go to the update function but it's not only numbers that go
 // it is all the buttons
 
-//we need to find a way to onkly accept numbers or only send 
+//we need to find a way to only accept numbers or only send 
 //numbers
 
-//try to work some ,aic on thr display function as well
+//try to make the display work as well it must show numbers being clickes
+//and also show the answer if possible
