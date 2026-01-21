@@ -32,6 +32,9 @@ body {
     display: flex;
     margin: 0 auto;
     margin-top: 20px;
+
+    font-size: 40px;
+    
   }
 
   /* all the button's container */

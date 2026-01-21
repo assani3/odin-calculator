@@ -64,10 +64,11 @@ num1 = num;
 console.log(num1)
 }
 
-function updateDisplay(){
-//it must be equal to the variale that stores the value of the operation "sum" is just a placeholder
-document.querySelector(".display").textContent = sum;
+function updateDisplay(elm){
+    document.querySelector(".display").textContent = elm;
+
 }
+updateDisplay()
 
 //Event delegation for our buttons
 
@@ -80,6 +81,7 @@ div.addEventListener('click', event =>{
     if(target.tagName === 'BUTTON'){
        // console.log(target.innerText);
         updateNumber1(target.innerText);
+        updateDisplay(target.innerText);
     }
 });
 
