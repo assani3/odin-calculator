@@ -1,3 +1,8 @@
+//three variables, one for each part of the operation
+let operator;
+let num1;
+let num2;
+
 function add(...num){
     let sum = 0;
     for(let i = 0; i < num.length; i++){
@@ -35,3 +40,61 @@ console.log(subtract(5, 2, 1, 1));
 console.log(multiply(2, 3, 2, 2));
 console.log(divide(24, 2, 2, 2));
 console.log("hello world");
+
+function operate(number1, operator1, number2){
+
+    if(operator1 === "+"){
+        return add(number1, number2);
+
+    } else if(operator1 === "-"){
+        return subtract(number1, number2);
+
+    } else if(operator1 === "*"){
+        return multiply(number1, number2);
+
+    } else if(operator1 === "/"){
+        return divide(number1, number2);
+    }
+
+}
+
+//Next session work on these it will probably be later today 2H session
+function updateNumber1(num){
+num1 = num;
+console.log(num1)
+}
+
+function updateDisplay(){
+    //it must be equal to the variale that stores the value of the operation "sum" is just a placeholder
+document.querySelector(".display").textContent = sum;
+}
+
+//Event delegation fpr our buttons
+
+const div = document.querySelector(".buttons");
+
+//console.log("div: ", div)
+div.addEventListener('click', event =>{
+    const target = event.target;
+
+    if(target.tagName === 'BUTTON'){
+       // console.log(target.innerText);
+        updateNumber1(target.innerText);
+    }
+
+        // Finds the button even if you click an icon inside it
+    // const btn = event.target.closest('button');
+
+    // if (btn) {
+    //     console.log(btn.innerText);
+    // }
+});
+
+//we are getting somehwere so now when we click the numbers
+//they can go to the update function but it's not only numbers that go
+// it is all the buttons
+
+//we need to find a way to onkly accept numbers or only send 
+//numbers
+
+//try to work some ,aic on thr display function as well
